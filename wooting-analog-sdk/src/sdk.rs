@@ -399,6 +399,7 @@ impl AnalogSDK {
         max_length: usize,
         device_id: DeviceID,
     ) -> SDKResult<HashMap<u16, f32>> {
+        println!("hello analog sdk");
         if !self.initialised {
             return Err(WootingAnalogResult::UnInitialized).into();
         }
