@@ -631,6 +631,9 @@ impl Plugin for WootingPlugin {
                     }
                 }
             }
+            for (key, value) in &analog {
+                println!("librs: {} / {}", key, value);
+            }    
 
             if !any_read {
                 Err(error).into()
