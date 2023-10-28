@@ -172,6 +172,10 @@ impl Plugin for CPlugin {
         };
 
         let mut analog_data: HashMap<c_ushort, c_float> = HashMap::with_capacity(count);
+
+        for (key, value) in &analog_data {
+            println!("cplugin: {} / {}", key, value);
+        }
         //println!("Count was {}", count);
         for i in 0..count {
             analog_data.insert(code_buffer[i], analog_buffer[i]);
