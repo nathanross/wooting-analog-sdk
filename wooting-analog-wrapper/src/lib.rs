@@ -184,8 +184,8 @@ pub fn read_full_buffer_device(
             device_id,
         )
         .into();
-        println!("analog buffer: {:?}", ret);
-        println!("code buffer: {:?}", ret);
+        println!("analog buffer: {:?}", analog_buffer);
+        println!("code buffer: {:?}", code_buffer);
 
         return ret
             .0
