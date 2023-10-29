@@ -416,6 +416,7 @@ impl AnalogSDK {
             match plugin_data {
                 Ok(mut data) => {
                     for (hid_code, analog) in data.drain() {
+                        println!("{:?}", analog);
                         let code = hid_to_code(hid_code, &self.keycode_mode);
                         if let Some(code) = code {
                             let mut total_analog = analog;
