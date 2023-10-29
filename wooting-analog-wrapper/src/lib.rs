@@ -173,9 +173,7 @@ pub fn read_full_buffer_device(
     max_items: usize,
     device_id: DeviceID,
 ) -> SDKResult<HashMap<u16, f32>> {
-    println!("analog_read");
     unsafe {
-        println!("analog_read_unsafe");
         let mut code_buffer: Vec<u16> = vec![0; max_items];
         let mut analog_buffer: Vec<f32> = vec![0.0; max_items];
 
@@ -186,6 +184,7 @@ pub fn read_full_buffer_device(
             device_id,
         )
         .into();
+        println!("{:?}", ret);
 
         return ret
             .0
